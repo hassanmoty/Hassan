@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Souq Draw</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
+</head>
+<body>
+  <h1>مرحبًا بكم في سوق دراو</h1>
+
+  <div id="auth">
+    <input type="email" id="email" placeholder="الإيميل">
+    <input type="password" id="password" placeholder="كلمة المرور">
+    <button onclick="login()">تسجيل الدخول</button>
+    <button onclick="register()">إنشاء حساب</button>
+  </div>
+
+  <div id="products" style="display:none;">
+    <h2>المنتجات:</h2>
+    <ul id="productList"></ul>
+    <h3>🛒 السلة</h3>
+    <ul id="cartList"></ul>
+    <button onclick="checkout()">إتمام الشراء</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
